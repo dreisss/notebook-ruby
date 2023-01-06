@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 # Basic string manipulation
 # Concat strings
-puts "Hello" + " World!"
+puts 'Hello' + ' World!'
 
 # String interpolation
-world = "World"
+world = 'World'
 puts "Hello #{world}!"
 
 # Literal string

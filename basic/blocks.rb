@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 # Blocks are just they say, a code block
 # do
@@ -14,19 +15,19 @@ def call_block
   yield
 end
 
-call_block { puts "Hello" }
+call_block { puts 'Hello' }
 
 # Using "each" iterator over an array
-%w{ banana apple orange }.each { |fruit| puts fruit }
+%w[banana apple orange].each { |fruit| puts fruit }
 
 # alternatively
-%w{ banana apple orange }.each do |fruit|
+%w[banana apple orange blueberry].each do |fruit|
   puts fruit
 end
 
 # using "times" iterator over a number
 4.times do
-  puts "Times Example"
+  puts 'Times Example'
 end
 
 # using "upto" iterator over a number

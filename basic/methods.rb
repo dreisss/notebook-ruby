@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 # Simple method/function creation
 # Without argument
 def print_hello_world
-  puts "Hello World!"
+  puts 'Hello World!'
 end
 
 print_hello_world
@@ -14,7 +15,7 @@ def print_text(text)
   return text
 end
 
-print_text "Hello World!"
+print_text 'Hello World!'
 
 # Convention: use snake_case to method names
 # Note: use "()" calling methods is optional

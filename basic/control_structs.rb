@@ -1,23 +1,24 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 # If statement
 if true
-  puts "True"
+  puts 'True'
 elsif false
-  puts "False"
+  puts 'False'
 else
-  puts "None of them"
+  puts 'None of them'
 end
 
 # One line if statement
-puts "True" if true
+puts 'True' if true
 
 # While statement
 while false
-  puts "Hidden"
+  puts 'Hidden'
 end
 
 # One line while statement
-puts "Hidden" while false
+puts 'Hidden' while false
 
 # Variable assignment can use these structures
