@@ -40,4 +40,12 @@ class SolutionTest < Test::Unit::TestCase
     assert_equal SOLUTION.five_nums_groups('YOURCIPHERISWORKINGX'), expected2
     assert_equal SOLUTION.five_nums_groups('WELCOMETORUBYQUIZXXX'), expected3
   end
+
+  def test_sum_number_arrays
+    number_array1 = [3, 15, 4, 5, 9, 14, 18, 21, 2, 25, 12, 9, 22, 5, 12, 15, 14, 7, 5, 18]
+    number_array2 = [4, 23, 10, 24, 8, 25, 18, 6, 4, 7, 20, 13, 19, 8, 16, 21, 21, 18, 24, 10]
+    expected = [7, 12, 14, 3, 17, 13, 10, 1, 6, 6, 6, 22, 15, 13, 2, 10, 9, 25, 3, 2]
+
+    assert_equal SOLUTION.sum_number_arrays(number_array1, number_array2), expected
+  end
 end
