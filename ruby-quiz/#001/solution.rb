@@ -28,4 +28,10 @@ class Solution
       sum > 26 ? sum - 26 : sum
     end
   end
+
+  def numbers_to_letters(number_array = [])
+    result = ''
+    number_array.each { |number| result += (number + 64).chr }
+    result
+  end
 end

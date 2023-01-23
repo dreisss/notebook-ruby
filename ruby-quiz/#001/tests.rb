@@ -48,4 +48,11 @@ class SolutionTest < Test::Unit::TestCase
 
     assert_equal SOLUTION.sum_number_arrays(number_array1, number_array2), expected
   end
+
+  def test_numbers_to_letters
+    number_array = [7, 12, 14, 3, 17, 13, 10, 1, 6, 6, 6, 22, 15, 13, 2, 10, 9, 25, 3, 2]
+    expected = 'GLNCQMJAFFFVOMBJIYCB'
+
+    assert_equal SOLUTION.numbers_to_letters(number_array), expected
+  end
 end
