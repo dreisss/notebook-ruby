@@ -13,4 +13,14 @@ class Solution
       .scan(/.{5}/) # split string to five character groups
       .join(' ') # join all character groups with space between them
   end
+
+  def string_to_numbers(cleaned_input = '')
+    result = []
+
+    cleaned_input.gsub(/\s/, '').each_char do |char|
+      result << char.ord - 64
+    end
+
+    result.join(' ')
+  end
 end
