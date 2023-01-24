@@ -73,16 +73,34 @@ class SolutionTest < Test::Unit::TestCase
   end
 
   def test_encrypt
-    phrase = 'Code in Ruby, live longer!'
     key = 'DWJXH YRFDG TMSHP UURXJ'
 
-    assert_equal 'GLNCQ MJAFF FVOMB JIYCB', SOLUTION.encrypt(phrase, key)
+    phrase1 = 'Code in Ruby, live longer!'
+    phrase2 = 'Your Cipher is Working!'
+    phrase3 = 'Welcome to Ruby Quiz!'
+
+    expected1 = 'GLNCQ MJAFF FVOMB JIYCB'
+    expected2 = 'CLEPK HHNIY CFPWH FDFEH'
+    expected3 = 'ABVAW LWZSY OORYK DUPVH'
+
+    assert_equal expected1, SOLUTION.encrypt(phrase1, key)
+    assert_equal expected2, SOLUTION.encrypt(phrase2, key)
+    assert_equal expected3, SOLUTION.encrypt(phrase3, key)
   end
 
   def test_decrypt
-    crypted_phrase = 'GLNCQ MJAFF FVOMB JIYCB'
     key = 'DWJXH YRFDG TMSHP UURXJ'
 
-    assert_equal 'CODEI NRUBY LIVEL ONGER', SOLUTION.decrypt(crypted_phrase, key)
+    crypted_phrase1 = 'GLNCQ MJAFF FVOMB JIYCB'
+    crypted_phrase2 = 'CLEPK HHNIY CFPWH FDFEH'
+    crypted_phrase3 = 'ABVAW LWZSY OORYK DUPVH'
+
+    expected1 = 'CODEI NRUBY LIVEL ONGER'
+    expected2 = 'YOURC IPHER ISWOR KINGX'
+    expected3 = 'WELCO METOR UBYQU IZXXX'
+
+    assert_equal expected1, SOLUTION.decrypt(crypted_phrase1, key)
+    assert_equal expected2, SOLUTION.decrypt(crypted_phrase2, key)
+    assert_equal expected3, SOLUTION.decrypt(crypted_phrase3, key)
   end
 end

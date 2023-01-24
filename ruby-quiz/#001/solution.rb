@@ -26,13 +26,15 @@ class Solution
 
   def sum_number_arrays(number_array1 = [], number_array2 = [])
     number_array1.map.each_with_index do |_, i|
-      (number_array1[i] + number_array2[i]).modulo(26)
+      sum = number_array1[i] + number_array2[i]
+      sum.equal?(26) ? 26 : sum.modulo(26)
     end
   end
 
   def subtract_number_arrays(number_array1 = [], number_array2 = [])
     number_array1.map.each_with_index do |_, i|
-      (number_array1[i] - number_array2[i]).modulo(26)
+      subtract = number_array1[i] - number_array2[i]
+      subtract.equal?(0) ? 26 : subtract.modulo(26)
     end
   end
 
