@@ -44,6 +44,14 @@ class SolutionTest < Test::Unit::TestCase
     assert_equal expected, SOLUTION.sum_number_arrays(number_array1, number_array2)
   end
 
+  def test_subtract_number_arrays
+    number_array1 = [7, 12, 14, 3, 17, 13, 10, 1, 6, 6, 6, 22, 15, 13, 2, 10, 9, 25, 3, 2]
+    number_array2 = [4, 23, 10, 24, 8, 25, 18, 6, 4, 7, 20, 13, 19, 8, 16, 21, 21, 18, 24, 10]
+    expected = [3, 15, 4, 5, 9, 14, 18, 21, 2, 25, 12, 9, 22, 5, 12, 15, 14, 7, 5, 18]
+
+    assert_equal expected, SOLUTION.subtract_number_arrays(number_array1, number_array2)
+  end
+
   def test_five_chars_groups
     assert_equal 'CODEI NRUBY LIVEL ONGER', SOLUTION.five_chars_groups('CODEINRUBYLIVELONGER')
     assert_equal 'YOURC IPHER ISWOR KINGX', SOLUTION.five_chars_groups('YOURCIPHERISWORKINGX')
