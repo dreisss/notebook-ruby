@@ -78,4 +78,11 @@ class SolutionTest < Test::Unit::TestCase
 
     assert_equal 'GLNCQ MJAFF FVOMB JIYCB', SOLUTION.encrypt(phrase, key)
   end
+
+  def test_decrypt
+    crypted_phrase = 'GLNCQ MJAFF FVOMB JIYCB'
+    key = 'DWJXH YRFDG TMSHP UURXJ'
+
+    assert_equal 'CODEI NRUBY LIVEL ONGER', SOLUTION.decrypt(crypted_phrase, key)
+  end
 end

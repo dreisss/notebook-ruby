@@ -54,4 +54,15 @@ class Solution
     result_numbers = sum_number_arrays(phrase_numbers, key_numbers)
     five_chars_groups(numbers_to_letters(result_numbers))
   end
+
+  def decrypt(crypted_phrase = '', key = '')
+    cleaned_crypted_phrase = clean_phrase(crypted_phrase)
+    cleaned_key = clean_key(key)
+
+    crypted_phrase_numbers = letters_to_numbers(cleaned_crypted_phrase)
+    key_numbers = letters_to_numbers(cleaned_key)
+
+    result_numbers = subtract_number_arrays(crypted_phrase_numbers, key_numbers)
+    five_chars_groups(numbers_to_letters(result_numbers))
+  end
 end
