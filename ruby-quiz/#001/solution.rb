@@ -2,24 +2,26 @@
 
 # Solution to challenge
 class Solution
-  def clean_input(input = '')
-    processed_input = input.upcase.gsub(/[^A-Z]/, '')
-    processed_input << 'X' until (processed_input.length % 5).zero?
-    processed_input
+  def clean_phrase(phrase = '')
+    processed_phrase = phrase.upcase.gsub(/[^A-Z]/, '')
+    processed_phrase << 'X' until (processed_phrase.length % 5).zero?
+    processed_phrase
   end
 
-  def five_chars_groups(input = '')
-    clean_input(input).scan(/.{5}/).join(' ')
+  def clean_key(key = '')
+    key.delete ' '
   end
 
-  def letters_to_numbers(cleaned_input = '')
+  def letters_to_numbers(cleaned_phrase = '')
     result = []
-    cleaned_input.each_char { |char| result << char.ord - 64 }
+    cleaned_phrase.each_char { |char| result << char.ord - 64 }
     result
   end
 
-  def five_nums_groups(cleaned_input = '')
-    letters_to_numbers(cleaned_input).join(' ').gsub(/(\d+\s){5}/, '\0 ')
+  def numbers_to_letters(number_array = '')
+    result = ''
+    number_array.each { |number| result += (number + 64).chr }
+    result
   end
 
   def sum_number_arrays(number_array1 = [], number_array2 = [])
@@ -29,15 +31,17 @@ class Solution
     end
   end
 
-  def numbers_to_letters(number_array = [])
-    result = ''
-    number_array.each { |number| result += (number + 64).chr }
-    result
+  def five_chars_groups(cleaned_phrase = '')
+    cleaned_phrase.scan(/.{5}/).join(' ')
+  end
+
+  def five_nums_groups(number_array = [])
+    number_array.join(' ').gsub(/(\d+\s){5}/, '\0 ')
   end
 
   def encrypt(phrase = '', key = '')
-    cleaned_phrase = clean_input(phrase)
-    cleaned_key = clean_input(key)
+    cleaned_phrase = clean_phrase(phrase)
+    cleaned_key = clean_key(key)
 
     phrase_numbers = letters_to_numbers(cleaned_phrase)
     key_numbers = letters_to_numbers(cleaned_key)
