@@ -1,24 +1,31 @@
-require File.expand_path(File.dirname(__FILE__) + '/neo')
+# frozen_string_literal: true
+
+require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
 # Implement a DiceSet Class here:
-#
-# class DiceSet
-#   code ...
-# end
 
-class AboutDiceProject < Neo::Koan
+class DiceSet # rubocop:disable Style/Documentation
+  attr_accessor :values
+
+  def roll(quantity = 0)
+    @values = []
+    @values << rand(1..6) until @values.size.equal?(quantity)
+  end
+end
+
+class AboutDiceProject < Neo::Koan # rubocop:disable Style/Documentation
   def test_can_create_a_dice_set
     dice = DiceSet.new
     assert_not_nil dice
   end
 
-  def test_rolling_the_dice_returns_a_set_of_integers_between_1_and_6
+  def test_rolling_the_dice_returns_a_set_of_integers_between_1_and_6 # rubocop:disable Naming/VariableNumber
     dice = DiceSet.new
 
     dice.roll(5)
-    assert dice.values.is_a?(Array), "should be an array"
+    assert dice.values.is_a?(Array), 'should be an array'
     assert_equal 5, dice.values.size
-    dice.values.each do |value|
+    dice.values.each do |value| # rubocop:disable Style/HashEachMethods
       assert value >= 1 && value <= 6, "value #{value} must be between 1 and 6"
     end
   end
@@ -40,8 +47,7 @@ class AboutDiceProject < Neo::Koan
     dice.roll(5)
     second_time = dice.values
 
-    assert_not_equal first_time, second_time,
-      "Two rolls should not be equal"
+    assert_not_equal first_time, second_time, 'Two rolls should not be equal'
 
     # THINK ABOUT IT:
     #
@@ -59,5 +65,4 @@ class AboutDiceProject < Neo::Koan
     dice.roll(1)
     assert_equal 1, dice.values.size
   end
-
 end
