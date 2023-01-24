@@ -55,4 +55,11 @@ class SolutionTest < Test::Unit::TestCase
 
     assert_equal SOLUTION.numbers_to_letters(number_array), expected
   end
+
+  def test_encrypt
+    phrase = 'Code in Ruby, live longer!'
+    key = 'DWJXH YRFDG TMSHP UURXJ'
+
+    assert_equal SOLUTION.encrypt(phrase, key), 'GLNCQ MJAFF FVOMB JIYCB'
+  end
 end

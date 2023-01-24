@@ -34,4 +34,15 @@ class Solution
     number_array.each { |number| result += (number + 64).chr }
     result
   end
+
+  def encrypt(phrase = '', key = '')
+    cleaned_phrase = clean_input(phrase)
+    cleaned_key = clean_input(key)
+
+    phrase_numbers = letters_to_numbers(cleaned_phrase)
+    key_numbers = letters_to_numbers(cleaned_key)
+
+    result_numbers = sum_number_arrays(phrase_numbers, key_numbers)
+    five_chars_groups(numbers_to_letters(result_numbers))
+  end
 end
