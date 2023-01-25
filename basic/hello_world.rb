@@ -1,5 +1,2 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-# Outputs the classic "Hello World!".
+# the "puts" method outputs the classic "Hello World!".
 puts 'Hello World!'
