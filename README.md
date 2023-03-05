@@ -1,13 +1,8 @@
-<h1 align="center">
-  <b> notebook: <i> <a href="#"> ruby </a> </i> </b>
-  <a href="#"> <img height="20" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" /> </a>
-</h1>
+# [**_`Notebook: Ruby`_**](#notebook-ruby)
 
-[**_Basic_**](./basic/)
+Notebook to study Ruby language.
 
-[**_Ruby Koans_**](./ruby-koans/)
-
-[**_Ruby Quiz**](./ruby-quiz/)
-
-[**_Ruby On Rails**](./on-rails/)
-
+| [**_`Basic`_**](./basic)
+| [**_`Ruby Koans`_**](./ruby-koans)
+| [**_`Ruby Quiz`_**](./ruby-quiz)
+| [**_`Ruby On Rails`_**](./on-rails) |
