@@ -3,6 +3,6 @@
 Notebook to study Ruby language.
 
 | [**_`Basic`_**](./basic)
-| [**_`Ruby Koans`_**](./ruby-koans)
-| [**_`Ruby Quiz`_**](./ruby-quiz)
-| [**_`Ruby On Rails`_**](./on-rails) |
+| [**_`Ruby Koans`_**](./koans)
+| [**_`Ruby Quiz`_**](./quiz)
+| [**_`Ruby On Rails`_**](./rails) |

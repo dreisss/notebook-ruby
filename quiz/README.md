@@ -1,6 +1,6 @@
 [previous]: https://github.com/dreisss/notebook-ruby
 
-# [**_`Notebook: Ruby - Basic`_**](#notebook-ruby---basic)
+# [**_`Notebook: Ruby - Quiz`_**](#notebook-ruby---quiz)
 
 <div align="right">
 
